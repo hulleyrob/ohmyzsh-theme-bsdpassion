@@ -4,6 +4,8 @@
 
 An oh-my-zsh theme;
 
+Forked from https://github.com/ChesterYue/ohmyzsh-theme-passion
+
 ### Feature
 
 * real time prompt;
