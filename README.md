@@ -36,7 +36,7 @@ Forked from https://github.com/ChesterYue/ohmyzsh-theme-passion
 ##### Color
 
 <!-- cspell:disable-next-line -->
-* iTerm2: settings -> Profiles -> Colors -> Color Presets -> import ```./passion.itermcolors``` ![color.png](./image/color.png)
+* iTerm2: settings -> Profiles -> Colors -> Color Presets -> import ```./bsdpassion.itermcolors``` ![color.png](./image/color.png)
 * alternate terminal: try [Alternate terminal installation and configuration](https://iterm2colorschemes.com/);
 
 ##### Status Bar
