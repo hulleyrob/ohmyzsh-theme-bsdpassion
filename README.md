@@ -2,7 +2,7 @@
 
 ## Introduction
 
-An oh-my-zsh theme;
+A work in progress oh-my-zsh theme;
 
 Forked from https://github.com/ChesterYue/ohmyzsh-theme-passion
 
