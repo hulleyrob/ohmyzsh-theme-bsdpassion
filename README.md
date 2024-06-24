@@ -18,10 +18,10 @@ Forked from https://github.com/ChesterYue/ohmyzsh-theme-passion
 
 #### Install
 
-1. clone repo: ```git clone https://github.com/hulleyrob/ohmyzsh-theme-bsdpassion```;
-2. copy theme: ```cp ./ohmyzsh-theme-bsdpassion/bsdpassion.zsh-theme ~/.oh-my-zsh/themes/bsdpassion.zsh-theme```;
-3. modify rc: open ```~/.zshrc``` find ```ZSH_THEME``` edit to ```ZSH_THEME="bsdpassion"```;
-4. execute rc: ```source ~/.zshrc```;
+1. clone repo: ```git clone https://github.com/hulleyrob/ohmyzsh-theme-bsdpassion```
+2. copy theme: ```cp ./ohmyzsh-theme-bsdpassion/bsdpassion.zsh-theme ~/.oh-my-zsh/themes/bsdpassion.zsh-theme```
+3. modify rc: open ```~/.zshrc``` find ```ZSH_THEME``` edit to ```ZSH_THEME="bsdpassion"```
+4. execute rc: ```source ~/.zshrc```
 
 * see also: [Overriding and adding themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Customization#overriding-and-adding-themes);
 
