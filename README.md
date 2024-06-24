@@ -11,7 +11,6 @@ Forked from https://github.com/ChesterYue/ohmyzsh-theme-passion
 * real time prompt;
 * command running time cost prompt;
 * command running error hint;
-* git status prompt;
 
 ## Usage
 
