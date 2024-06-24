@@ -1,4 +1,3 @@
-
 # gdate for macOS
 # REF: https://apple.stackexchange.com/questions/135742/time-in-milliseconds-since-epoch-in-the-terminal
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -32,7 +31,8 @@ function login_info() {
         ip="$(ifconfig | grep ^eth1 -A 1 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -1)";
     elif [[ "$OSTYPE" == "darwin"* ]]; then
         # macOS
-        ip="$(ifconfig | grep ^en1 -A 4 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -1)";
+        #ip="$(ifconfig | grep ^en1 -A 4 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -1)";
+        ip="$(ifconfig | grep "inet " | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}'  | grep -v -e '127.0.0.1' -e '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.255' | head -1)";
     elif [[ "$OSTYPE" == "cygwin" ]]; then
         # POSIX compatibility layer and Linux environment emulation for Windows
     elif [[ "$OSTYPE" == "msys" ]]; then
@@ -40,12 +40,14 @@ function login_info() {
     elif [[ "$OSTYPE" == "win32" ]]; then
         # I'm not sure this can happen.
     elif [[ "$OSTYPE" == "freebsd"* ]]; then
-        # ...
+        ip="$(ifconfig | grep -e 'igb0' -A 4 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -1)";
     else
-        # Unknown.
+        # Unknown
+        ip="$(ifconfig | grep -e 'igb0' -A 4 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -1)";
     fi
+    local host=$HOST
     local color_reset="%{$reset_color%}";
-    echo "${color}[%n@${ip}]${color_reset}";
+    echo "${color}[%n@${host}]${color_reset}";
 }
 
 
@@ -83,9 +85,9 @@ function update_command_status() {
     export COMMAND_RESULT=$COMMAND_RESULT
     if $COMMAND_RESULT;
     then
-        arrow="%{$fg_bold[red]%}❱%{$fg_bold[yellow]%}❱%{$fg_bold[green]%}❱";
+        arrow="%{$fg[lime]%}●";
     else
-        arrow="%{$fg_bold[red]%}❱❱❱";
+        arrow="%{$fg[red]%}●";
     fi
     COMMAND_STATUS="${arrow}${reset_font}${color_reset}";
 }
@@ -210,5 +212,4 @@ TRAPALRM() { # cspell:disable-line
 
 
 # prompt
-# PROMPT='$(real_time) $(login_info) $(directory) $(git_status)$(command_status) ';
-PROMPT='$(real_time) $(directory) $(git_status)$(command_status) ';
+PROMPT='$(real_time) $(login_info) $(directory) $(git_status)$(command_status) ';
