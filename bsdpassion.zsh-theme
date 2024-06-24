@@ -43,7 +43,6 @@ function login_info() {
         ip="$(ifconfig | grep -e 'igb0' -A 4 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -1)";
     else
         # Unknown
-        ip="$(ifconfig | grep -e 'igb0' -A 4 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -1)";
     fi
     local host=$HOST
     local color_reset="%{$reset_color%}";
