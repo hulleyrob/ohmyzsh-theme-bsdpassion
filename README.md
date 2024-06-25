@@ -2,15 +2,15 @@
 
 ## Introduction
 
-A work in progress oh-my-zsh theme;
+A work in progress oh-my-zsh theme
 
 Forked from https://github.com/ChesterYue/ohmyzsh-theme-passion
 
 ### Feature
 
-* real time prompt;
-* command running time cost prompt;
-* command running error hint;
+* real time prompt
+* command running time cost prompt
+* command running error hint
 
 ## Usage
 
@@ -39,8 +39,8 @@ Forked from https://github.com/ChesterYue/ohmyzsh-theme-passion
 
 #### Recommended Zsh Plugins
 
-1. [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions);
-2. [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting);
+1. [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+2. [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 #### iTerm2 Preferences
 
@@ -48,7 +48,7 @@ Forked from https://github.com/ChesterYue/ohmyzsh-theme-passion
 
 <!-- cspell:disable-next-line -->
 * iTerm2: settings -> Profiles -> Colors -> Color Presets -> import ```./bsdpassion.itermcolors``` ![color.png](./image/color.png)
-* alternate terminal: try [Alternate terminal installation and configuration](https://iterm2colorschemes.com/);
+* alternate terminal: try [Alternate terminal installation and configuration](https://iterm2colorschemes.com/)
 
 ##### Status Bar
 
