@@ -41,6 +41,7 @@ Forked from https://github.com/ChesterYue/ohmyzsh-theme-passion
 
 1. [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 2. [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+3. [command-line fuzzy finder](https://github.com/junegunn/fzf))
 
 #### iTerm2 Preferences
 
