@@ -37,7 +37,7 @@ Forked from https://github.com/ChesterYue/ohmyzsh-theme-passion
 
 * see also: [Overriding and adding themes](https://github.com/ohmyzsh/ohmyzsh/wiki/Customization#overriding-and-adding-themes);
 
-#### Zsh Plugins
+#### Recommended Zsh Plugins
 
 1. [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions);
 2. [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting);
