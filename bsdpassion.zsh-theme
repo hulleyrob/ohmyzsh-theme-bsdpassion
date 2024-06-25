@@ -40,9 +40,11 @@ function login_info() {
     elif [[ "$OSTYPE" == "win32" ]]; then
         # I'm not sure this can happen.
     elif [[ "$OSTYPE" == "freebsd"* ]]; then
+        # ...
         ip="$(ifconfig | grep -e 'igb0' -A 4 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -1)";
     else
-        # Unknown
+        # Unknown.
+        ip="$(ifconfig | grep -e 'igb0' -A 4 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -1)";
     fi
     local host=$HOST
     local color_reset="%{$reset_color%}";
@@ -208,7 +210,6 @@ TRAPALRM() { # cspell:disable-line
         zle reset-prompt;
     fi
 }
-
 
 NEWLINE=$'\n\n'
 # prompt
