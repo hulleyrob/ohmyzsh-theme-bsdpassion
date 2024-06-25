@@ -210,5 +210,6 @@ TRAPALRM() { # cspell:disable-line
 }
 
 
+NEWLINE=$'\n\n'
 # prompt
-PROMPT='$(real_time) $(login_info) $(directory) $(git_status)$(command_status) ';
+PROMPT='$(real_time) $(login_info) $(directory) $(git_status)$NEWLINE$(command_status) ';
