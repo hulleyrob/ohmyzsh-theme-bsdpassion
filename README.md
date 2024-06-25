@@ -55,3 +55,10 @@ Forked from https://github.com/ChesterYue/ohmyzsh-theme-passion
 * iTerm2: settings -> Appearance && settings -> Profiles -> Session -> Configure Status Bar ![status_0.png](./image/status_0.png) ![status_1.png](./image/status_1.png)
 
 </details> <!-- markdownlint-disable-line -->
+
+#### Why newline on the prompt?
+
+<img width="871" alt="image" src="https://github.com/hulleyrob/ohmyzsh-theme-bsdpassion/assets/17217514/d314e37d-a1ba-4eb5-8897-2e9c342b94bf">
+
+Useful if using smaller terminal windows
+
