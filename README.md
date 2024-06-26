@@ -68,4 +68,5 @@ Useful if using smaller terminal windows
 <img width="585" alt="image" src="https://github.com/hulleyrob/ohmyzsh-theme-bsdpassion/assets/17217514/3f42d544-e006-4830-b697-c4ffd3208f2b">
 
 Red Dot   = Last command returned unsuccesful completion status
+
 Green Dot = Last command returned succesful completion status
