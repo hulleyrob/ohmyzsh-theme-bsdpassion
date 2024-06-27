@@ -43,7 +43,7 @@ Forked from https://github.com/ChesterYue/ohmyzsh-theme-passion
 2. [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 3. [command-line fuzzy finder](https://github.com/junegunn/fzf)
 
-* plugins/zsh-interactive-cd is already sources in the .zshrc file
+* plugins/zsh-interactive-cd is already sourced in the .zshrc file
 
 #### iTerm2 Preferences
 
