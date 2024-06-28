@@ -50,14 +50,8 @@ Forked from https://github.com/ChesterYue/ohmyzsh-theme-passion
 ##### Color
 
 <!-- cspell:disable-next-line -->
-* iTerm2: settings -> Profiles -> Colors -> Color Presets -> import ```./bsdpassion.itermcolors``` ![color.png](./image/color.png)
+* iTerm2: settings -> Profiles -> Colors -> Color Presets -> import ```./bsdpassion.itermcolors```
 * alternate terminal: try [Alternate terminal installation and configuration](https://iterm2colorschemes.com/)
-
-##### Status Bar
-
-* iTerm2: settings -> Appearance && settings -> Profiles -> Session -> Configure Status Bar ![status_0.png](./image/status_0.png) ![status_1.png](./image/status_1.png)
-
-</details> <!-- markdownlint-disable-line -->
 
 #### Why newline on the prompt?
 
