@@ -50,7 +50,7 @@ function login_info() {
     fi
     local host=$HOST
     local color_reset="%{$reset_color%}";
-    echo "${color}[%n@${host}${ip}]${color_reset}";
+    echo "${color}[%n@${host}][${ip}]${color_reset}";
 }
 
 
