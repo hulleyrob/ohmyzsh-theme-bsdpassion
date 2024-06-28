@@ -28,13 +28,12 @@ function login_info() {
     local ip
     if [[ "$OSTYPE" == "linux-gnu" ]]; then
         # Linux
-        ip="$(ifconfig | grep ^eth1 -A 1 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -1)";
+        ip=" [$(ifconfig | grep ^eth1 -A 1 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -1)]";
     elif [[ "$OSTYPE" == "linux-musl" ]]; then
         # iSH dont even try to get it.
     elif [[ "$OSTYPE" == "darwin"* ]]; then
         # macOS
-        #ip="$(ifconfig | grep ^en1 -A 4 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -1)";
-        ip="$(ifconfig | grep "inet " | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}'  | grep -v -e '127.0.0.1' -e '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.255' | head -1)";
+        ip=" [$(ifconfig | grep "inet " | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}'  | grep -v -e '127.0.0.1' -e '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.255' | head -1)]";
     elif [[ "$OSTYPE" == "cygwin" ]]; then
         # POSIX compatibility layer and Linux environment emulation for Windows
     elif [[ "$OSTYPE" == "msys" ]]; then
@@ -42,15 +41,13 @@ function login_info() {
     elif [[ "$OSTYPE" == "win32" ]]; then
         # I'm not sure this can happen.
     elif [[ "$OSTYPE" == "freebsd"* ]]; then
-        # ...
-        ip="$(ifconfig | grep -e 'igb0' -A 4 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -1)";
+        ip=" [$(ifconfig | grep -e 'igb0' -A 4 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -1)]";
     else
-        # Unknown.
-        ip="$(ifconfig | grep -e 'igb0' -A 4 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -1)";
+        # Unknown not even going to try
     fi
     local host=$HOST
     local color_reset="%{$reset_color%}";
-    echo "${color}[%n@${host}] [${ip}]${color_reset}";
+    echo "${color}[%n@${host}]${ip}${color_reset}";
 }
 
 
