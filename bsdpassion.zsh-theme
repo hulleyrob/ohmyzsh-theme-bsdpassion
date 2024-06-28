@@ -29,6 +29,8 @@ function login_info() {
     if [[ "$OSTYPE" == "linux-gnu" ]]; then
         # Linux
         ip="$(ifconfig | grep ^eth1 -A 1 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -1)";
+    elif [[ "$OSTYPE" == "linux-musl" ]]; then
+        # iSH dont even try to get it.
     elif [[ "$OSTYPE" == "darwin"* ]]; then
         # macOS
         #ip="$(ifconfig | grep ^en1 -A 4 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -1)";
@@ -48,7 +50,7 @@ function login_info() {
     fi
     local host=$HOST
     local color_reset="%{$reset_color%}";
-    echo "${color}[%n@${host}]${color_reset}";
+    echo "${color}[%n@${host}]${color_reset} ${ip}";
 }
 
 
@@ -152,6 +154,9 @@ current_time_millis() {
     if [[ "$OSTYPE" == "linux-gnu" ]]; then
         # Linux
         time_millis="$(date +%s.%3N)";
+    elif [[ "$OSTYPE" == "linux-musl" ]]; then
+        # iSH
+        time_millis="$(date +%s.%3N)";
     elif [[ "$OSTYPE" == "darwin"* ]]; then
         # macOS
         time_millis="$(gdate +%s.%3N)";
@@ -162,7 +167,7 @@ current_time_millis() {
     elif [[ "$OSTYPE" == "win32" ]]; then
         # I'm not sure this can happen.
     elif [[ "$OSTYPE" == "freebsd"* ]]; then
-        # ...
+        time_millis="$(date +%s.%3N)";
     else
         # Unknown.
     fi
