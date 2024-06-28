@@ -61,13 +61,13 @@ Forked from https://github.com/ChesterYue/ohmyzsh-theme-passion
 
 #### Why newline on the prompt?
 
-<img width="871" alt="image" src="https://github.com/hulleyrob/ohmyzsh-theme-bsdpassion/assets/17217514/d314e37d-a1ba-4eb5-8897-2e9c342b94bf">
+<img width="713" alt="image" src="https://github.com/hulleyrob/ohmyzsh-theme-bsdpassion/assets/17217514/cbfd35b4-e9a4-4be1-95f7-7372713d104b">
 
 Useful if using smaller terminal windows
 
 #### What do the red and green dot mean?
 
-<img width="585" alt="image" src="https://github.com/hulleyrob/ohmyzsh-theme-bsdpassion/assets/17217514/3f42d544-e006-4830-b697-c4ffd3208f2b">
+<img width="429" alt="image" src="https://github.com/hulleyrob/ohmyzsh-theme-bsdpassion/assets/17217514/123b3772-2c46-42f5-94ab-8ab40842658b">
 
 Red Dot   = Last command returned unsuccesful completion status
 
